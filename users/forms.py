@@ -26,4 +26,4 @@ class CuentaUpdateForm(forms.ModelForm):
     class Meta:
 
         model = Cuenta
-        fields = ['imagen']
+        fields = ['image']

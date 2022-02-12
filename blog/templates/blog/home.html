@@ -2,7 +2,7 @@
 {% block content %}
     {% for post in posts %}
       <article class="media content-section">
-        <img class="rounded-circle article-img" src="{{ post.autor.cuenta.imagen.url }}"> <!-- para colocar imagen circular en la página principal -->
+        <img class="rounded-circle article-img" src="{{ post.autor.cuenta.image.url }}"> <!-- para colocar imagen circular en la página principal -->
         <div class="media-body">
           <div class="article-metadata">
           <a class="mr-2" href="{% url 'user-posts' post.autor.username %}">{{ post.autor }}</a>
