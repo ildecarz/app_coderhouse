@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+ <section id="header">
+  <div class="content-section">
+   
+      <div class="col-md-6 col-sm-6 mt-5">
+        <div class="header-content-left">
+          <img src="static/appcoder/coderhouse-logo.png" style="width: 100%;">
+        </div>  
+      </div>
+     
+        <div class="header-content-rigth mt-5">
+          <h2 class="display-4">Bienvenidos a nuestro Proyecto Final</h2>
+          <h3 class="mt-5">Aquí encontraras todo lo que hemos aprendido durante todo el curso!</h3>
+          <a href="{% url 'app-about' %}" class="btn btn-outline-secondary header-btn btn-lg mt-2 header-btn">Acerca de nosotros</a>
+          <a href="{% url 'curso-listview' %}" class="btn btn-outline-secondary header-btn btn-lg mt-2 header-btn">Cursos</a> 
+          <a href="{% url 'blog-home' %}" class="btn btn-outline-secondary header-btn btn-lg mt-2 header-btn">Blog</a>
+        
+      </div>
+    
+  </div>
+</section>
+{% endblock content %}

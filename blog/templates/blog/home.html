@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for post in posts %}
+      <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ post.autor.cuenta.imagen.url }}"> <!-- para colocar imagen circular en la página principal -->
+        <div class="media-body">
+          <div class="article-metadata">
+          <a class="mr-2" href="{% url 'user-posts' post.autor.username %}">{{ post.autor }}</a>
+          <small class="text-muted">{{ post.fecha|date:"d F, Y" }}</small>
+         </div>
+         <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.titulo }}</a></h2>
+         <p class="article-content">{{ post.contenido }}</p>
+        </div>
+      </article>
+    {% endfor %}
+{% endblock content %}

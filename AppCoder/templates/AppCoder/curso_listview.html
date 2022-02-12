@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for cur in cursos  %}
+    <div class="container">
+      <article class="content-section">
+        <li>
+         <h3 class="article-content">{{ cur.nombre }}</h3>
+         <h3 class="article-content">{{ cur.camada }}</h3>
+         <a class="btn btn-secundary btn-sm mt-1 mb-1" href="{% url 'curso-update' cur.id %}">Actualizar<a>
+         <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'curso-delete' cur.id %}">Borror curso<a>
+        </li>
+      </article>
+    </div>
+    {% endfor %}
+
+    <div class="container">
+      <a href="{% url 'curso-create' %}" class="btn btn-outline-secondary header-btn btn-lg mt-2 header-btn">Agregar Cursos</a>
+    </div>
+{% endblock content %}

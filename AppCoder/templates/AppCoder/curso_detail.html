@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+             <a class="mr-2" href="{% url 'curso-listview'%}">{{ object.nombre }}</a>
+             <div>
+              <a class="btn btn-secundary btn-sm mt-1 mb-1" href="{% url 'curso-update' object.id %}">Actualizar<a>
+              <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'curso-delete' object.id %}">Borror curso<a>
+            </div>
+          </div>
+        </div>
+      </article>
+{% endblock content %}
